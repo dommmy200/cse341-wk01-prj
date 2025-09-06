@@ -8,7 +8,7 @@ const router = require('./routes');
 const mongodb = require('./data/database');
 
 
-const port = process.env.PORT || 5500;
+const port = process.env.PORT || 3000;
 
 app.use('/', router);
 
