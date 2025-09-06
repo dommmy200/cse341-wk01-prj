@@ -1,0 +1,6 @@
+# Environment variables
+.env
+
+# node_modules is a storage folder for Node and
+# can get very large.
+node_modules

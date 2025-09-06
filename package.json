@@ -1,0 +1,29 @@
+{
+  "name": "cse341-wk01-prj",
+  "version": "1.0.0",
+  "description": "API for storing and retrieving information",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dommmy200/cse341-wk01-prj.git"
+  },
+  "author": "Abah Dominic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dommmy200/cse341-wk01-prj/issues"
+  },
+  "homepage": "https://github.com/dommmy200/cse341-wk01-prj#readme",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongod": "^2.0.0",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.0",
+    "node": "^20.19.5",
+    "nodemon": "^3.1.10"
+  }
+}
