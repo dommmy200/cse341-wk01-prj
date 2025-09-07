@@ -1,0 +1,11 @@
+@baseUrl = {{baseUrl}}
+
+### Get all contacts
+GET {{baseUrl}}/contacts
+Content-Type: application/json
+
+###
+
+### Get a single contact by ID
+GET {{baseUrl}}/contacts/64ff1a2b34f6b2e84c123456
+Content-Type: application/json
