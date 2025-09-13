@@ -7,12 +7,13 @@ const swaggerUi = require('swagger-ui-express');
 const dotenv = require('dotenv');
 dotenv.config();
 
+app.use(express.json());
+
 const router = require('./routes');
 const mongodb = require('./data/database');
 
 const port = process.env.PORT || 3000;
 
-app.use(express.json());
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
