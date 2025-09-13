@@ -10,4 +10,31 @@ Content-Type: application/json
 GET https://cse341-wk01-prj.onrender.com/contacts/68bd7ee59498bdf2085f68cd HTTP/1.1
 Content-Type: application/json
 
+### Create contact
+POST http://localhost:3000/contacts/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "favColor": "blue",
+    "email": "alice.johnson@example.com",
+    "birthday": "{ \"$date\": \"1992-01-14T00:00:00.000Z\"}"
+}
+
+### Update a contact
+PUT http://localhost:3000/contacts/posts/68bd7ee59498bdf2085f68cd HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Janice",
+    "lastName": "Johns",
+    "favColor": "blue",
+    "email": "janice.johns@example.com",
+    "birthday": "{ \"$date\": \"1986-01-14T00:00:00.000Z\"}"
+}
+
+### Delete a contact
+DELETE  http://localhost:3000/contacts/delete/68bd7ee59498bdf2085f68cd HTTP/1.1
+
 ### GET {{baseUrl}}/contacts/68bd7ee59498bdf2085f68cd HTTP/1.1

@@ -3,6 +3,7 @@ const mongodb = require('mongodb');
 const { ObjectId } = mongodb;
 
 const getAll = async (req, res) => {
+  //swagger.tags=['Hello World']
   try {
     const db = database.getDatabase();
     const contacts = await db.collection("contacts").find().toArray();
@@ -18,6 +19,7 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  //swagger.tags=['Hello World']
   try {
     if (!ObjectId.isValid(req.params.id)) {
       return res.status(400).json({ message: "Invalid ID format" });
@@ -38,6 +40,7 @@ const getSingle = async (req, res) => {
 };
 
 const insertPosts = async (req, res) => {
+  //swagger.tags=['Hello World']
     const db = database.getDatabase();
     const newPost = {
       firstName: req.body.firstName,
@@ -58,6 +61,7 @@ const insertPosts = async (req, res) => {
 };
 
 const updateRecords = async (req, res) => {
+  //swagger.tags=['Hello World']
     try {
         const db = database.getDatabase();
         const { id } = req.params;
@@ -93,6 +97,7 @@ const updateRecords = async (req, res) => {
 };
 
 const deleteOne = async (req, res) => {
+  //swagger.tags=['Hello World']
   try {
     const db = database.getDatabase();
     const { id } = req.params;
