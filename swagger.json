@@ -106,57 +106,37 @@
     },
     "/contacts/posts/{id}": {
       "put": {
-        "summary": "Update a contact",
-        "description": "",
+        "description": "Update a contact by its ID",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "description": "The ID of the contact to update",
+            "type": "string",
+            "description": "The ID of the contact to update"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Contact fields to update",
+            "required": true,
             "schema": {
-                "type": "object",
-                "properties": {
-                  "firstName": {
-                    "type": "string",
-                    "example": "Brian"
-                  },
-                  "lastName": {
-                    "type": "string",
-                    "example": "Smith"
-                  },
-                  "favColor": {
-                    "type": "string",
-                    "example": "green"
-                  },
-                  "email": {
-                    "type": "string",
-                    "format": "email",
-                    "example": "brian.smith@example.com"
-                  },
-                  "birthday": {
-                    "type": "string",
-                    "format": "date-time",
-                    "example": "1988-05-22T00:00:00.000Z"
-                  }
-                },
-                "required": ["firstName", "lastName", "email"]
-              }
+              "type": "object",
+              "properties": {
+                "firstName": { "type": "string", "example": "Brian" },
+                "lastName": { "type": "string", "example": "Smith" },
+                "favColor": { "type": "string", "example": "green" },
+                "email": { "type": "string", "example": "brian.smith@example.com" },
+                "birthday": { "type": "string", "example": "1988-05-22T00:00:00.000Z" }
+              },
+              "required": ["firstName", "lastName", "email"]
+            }
           }
         ],
         "responses": {
-          "200": {
-            "description": "Contact updated successfully"
-          },
-          "400": {
-            "description": "Invalid ID format or empty data"
-          },
-          "404": {
-            "description": "No matching contact found"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "200": { "description": "Contact updated successfully" },
+          "400": { "description": "Invalid ID or empty body" },
+          "404": { "description": "No matching contact found" }
         }
       }
     },
