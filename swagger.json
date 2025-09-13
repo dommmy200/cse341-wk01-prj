@@ -115,15 +115,6 @@
             "required": true,
             "description": "The ID of the contact to update",
             "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
                 "type": "object",
                 "properties": {
                   "firstName": {
@@ -151,9 +142,8 @@
                 },
                 "required": ["firstName", "lastName", "email"]
               }
-            }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Contact updated successfully"
